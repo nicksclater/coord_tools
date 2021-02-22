@@ -1,2 +1,3 @@
-# mgrs_tkinter
-mgrs converted app using Tk
+# coor tools
+two coord tools written for tkinter
+
