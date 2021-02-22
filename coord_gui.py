@@ -1,3 +1,4 @@
+
 import tkinter as tk
 from mgrspy import mgrs as m
 import OSGridConverter as OS
@@ -31,8 +32,8 @@ class App:
 		self.convert_btn = tk.Button(master, text='convert', command=self.convert_btn_pressed)
 		self.convert_btn.grid(row=2, column=0, columnspan=2, sticky='EW', padx=(10,10), pady=(1,1))
 
-		self.result_label = tk.Label(master, textvariable=self.result, bg='gray100')
-		self.result_label.grid(row=3, column=0, columnspan=2, sticky='EW', padx=(10,10), pady=(1,1))
+		self.result_label = tk.Label(master, textvariable=self.result, bg='gray100', borderwidth=2, relief="groove")
+		self.result_label.grid(row=3, column=0, columnspan=2, sticky='EW', padx=(10,10), pady=(1,5))
 
 	
 	def convert_btn_pressed(self):
