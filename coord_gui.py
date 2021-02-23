@@ -67,7 +67,6 @@ class App:
 		
 		try:
 			wgs84 = m.toWgs(self.input.get())
-			print('mgrs')
 			return wgs84
 		except:
 			pass
@@ -75,7 +74,6 @@ class App:
 		try:
 			tmp = OS.grid2latlong(self.input.get())
 			wgs84 = (tmp.latitude, tmp.longitude)
-			print('bng')
 			return wgs84
 		except:
 			pass
@@ -83,17 +81,12 @@ class App:
 		try:
 			tmp = self.input.get().split()
 			n,e = tmp[0], tmp[1]
-			print('dm')
-			print(n,e)
 			_n, _e = int(n[1:3]) + (float(n[3:]) / 60), int(e[1:3]) + (float(e[3:]) / 60)
-			print(_n,_e)
 
 			_n = _n * -1 if re.search('[Ss-]', n) else _n
 			_e =_e * -1 if re.search('[Ww-]', e) else _e
-			print(_n,_e)
 
 			ans = (_n,_e)
-			print(ans, type(ans))
 
 			return ans
 
